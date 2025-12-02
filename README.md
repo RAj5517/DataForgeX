@@ -9,39 +9,30 @@ AI Power — Without Losing Privacy.
 🔥 Why DataMarket?
 
 Today, people and companies have valuable data — documents, reports, datasets, logs — but:
-
 There is no safe way to share/sell data without giving up control
-
 AI tools require raw, unencrypted input (security risk)
-
 Buyers can’t trust sellers; sellers can’t trust buyers
-
 No audit trail exists to show who accessed what
-
 Centralized platforms can leak, misuse, or mine user data
 
 DataMarket fixes all of this.
 
 ✅ What DataMarket Solves
-✔ Private data sharing without loss of control
 
+✔ Private data sharing without loss of control
 All files are encrypted before upload.
 Raw data is never visible to servers, IPFS, or smart contracts.
 
 ✔ AI insights on encrypted documents
-
 AI models analyze the data after controlled decryption — privately and securely.
 
 ✔ On-chain audit trail (Base L2)
-
 Every action (purchase, access, AI run) is logged on-chain for verifiability — without revealing the data.
 
 ✔ Fair, trustless payments
-
 USDC transfers and access permissions are handled by smart contracts.
 
 ✔ Data ownership stays with the user
-
 Uploaders can revoke access, delete documents, or change pricing anytime.
 
 🧱 High-Level Architecture
@@ -65,82 +56,59 @@ User → Client-side Encryption → Encrypted File → IPFS
 1. Client-side encryption
 
 AES-256-GCM keys generated in the browser
-
 No plaintext ever leaves the device
 
 2. Data stored on IPFS
 
 Only encrypted blobs stored
-
 Metadata stored in backend database
 
 3. Marketplace smart contract (Base)
 
 List encrypted data
-
 Buy listings with USDC
-
 Grant access upon purchase
-
 On-chain event logs for transparency
 
 4. AI inference engine
 
-Summarization, extraction, insights
-
+Summarization, extraction, insight
 Python + FastAPI + HuggingFace models
-
 Decrypts only when needed, never stores plaintext
 
 5. Audit trail
 
 Every AI operation emits AuditLogged
-
 Buyers/sellers can verify interactions
-
 No sensitive data stored on-chain
 
 🏗 Tech Stack
 Frontend
 
 Next.js + TypeScript
-
 Tailwind CSS
-
 Wagmi + Ethers.js (wallet connection)
-
 Web Crypto API (AES-GCM encryption)
 
 Backend
 
 FastAPI (Python)
-
 Celery/RQ (background AI tasks)
-
 HuggingFace Transformers + PyTorch
 
 PostgreSQL DB
-
 web3.py for on-chain interactions
 
 Smart Contracts
 
 Solidity
-
 Hardhat / Foundry
-
 Deployed on Base Sepolia → Base Mainnet
-
 OpenZeppelin libraries
-
 ERC20 USDC payments
-
 Storage & Infra
-
 IPFS (web3.storage or Pinata)
-
 Docker / Cloud Run / AWS ECS
-
 Alchemy / QuickNode for Base RPC
 
 🧩 Modules Overview
