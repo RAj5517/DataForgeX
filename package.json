@@ -1,0 +1,40 @@
+{
+  "name": "dataforgex",
+  "version": "0.1.0",
+  "description": "Privacy-First AI + Web3 Data Marketplace on Base",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload",
+    "build:frontend": "cd frontend && npm run build",
+    "build:contracts": "cd contracts && npx hardhat compile",
+    "test:contracts": "cd contracts && npx hardhat test",
+    "lint": "echo 'Add linting scripts here'",
+    "format": "echo 'Add formatting scripts here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/dataforgex.git"
+  },
+  "keywords": [
+    "web3",
+    "blockchain",
+    "base",
+    "ipfs",
+    "ai",
+    "data-marketplace",
+    "privacy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
